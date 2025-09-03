@@ -5,7 +5,7 @@
 package com.mycompany.testfile;
 
 /**
- *
+ *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
 public class Essay extends GradedActivity {
@@ -15,7 +15,7 @@ public class Essay extends GradedActivity {
     private double content;
     
     public void setScore(double gr, double sp, double len, double cnt) {
-        score = gr * 0.3 + sp *0.2 + len * 0.2 + cnt * 0.3;
+        score = gr + sp + len + cnt;
     }
 
     public double getGrammar() {
@@ -50,4 +50,8 @@ public class Essay extends GradedActivity {
         this.content = content;
     }
     
+    @Override
+    public String toString() {
+                return "\nTotal points: " + getScore() + "\nGrade: " + getGrade();
+    }
 }

@@ -5,7 +5,7 @@
 package com.mycompany.testfile;
 
 /**
- *
+ *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
 public class CourseGrades implements Analyzable {
@@ -13,6 +13,7 @@ public class CourseGrades implements Analyzable {
     private int NUM_GRADES = 4;
 
     public CourseGrades() {
+        grades = new GradedActivity[NUM_GRADES];
     }
     
     public void setLab(GradedActivity aLab) {
@@ -49,12 +50,24 @@ public class CourseGrades implements Analyzable {
 
     @Override
     public GradedActivity getHighest() {
-        
+        GradedActivity highest = grades[0];
+        for (int i = 0; i < grades.length; i++) {
+            if (highest.getScore() < grades[i].getScore()) {
+                highest = grades[i];
+            }
+        }
+        return highest;
     }
 
     @Override
     public GradedActivity getLowest() {
-        
+        GradedActivity lowest = grades[0];
+        for (GradedActivity g : grades) {
+            if (g.getScore() < lowest.getScore()) {
+                lowest = g;
+            }
+        }
+        return lowest;
     }
     
     

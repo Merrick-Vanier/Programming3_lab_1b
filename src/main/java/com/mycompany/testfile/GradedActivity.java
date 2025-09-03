@@ -5,7 +5,7 @@
 package com.mycompany.testfile;
 
 /**
- *
+ *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
 public class GradedActivity {

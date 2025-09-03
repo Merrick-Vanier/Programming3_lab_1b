@@ -5,18 +5,20 @@
 package com.mycompany.testfile;
 
 /**
- *
+ * https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
-public class PassFailExam extends GradedActivity {
+public class PassFailExam extends PassFailActivity {
     private int numQuestions;
     private double pointsEach;
     private int numMissed;
 
-    public PassFailExam(int numQuestions, double pointsEach, int numMissed) {
-        this.numQuestions = numQuestions;
-        this.pointsEach = pointsEach;
-        this.numMissed = numMissed;
+    public PassFailExam(int questions, int missed, double minPassing) {
+        this.numQuestions = questions;
+        this.numMissed = missed;
+        this.pointsEach = 100/questions;
+        setMinPassingScore(minPassing);
+        setScore(100 - (this.numMissed * pointsEach));
     }
 
     public double getPointsEach() {
@@ -26,6 +28,14 @@ public class PassFailExam extends GradedActivity {
     public int getNumMissed() {
         return numMissed;
     }
+
+    @Override
+    public String toString() {
+                return "Each question is worth " + pointsEach + " points each.\n" +
+                "The exam score is " + getScore() + "\n" +
+                "The exam grade is " + getGrade();
+    }
+    
     
     
 }

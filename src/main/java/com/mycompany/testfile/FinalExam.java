@@ -5,7 +5,7 @@
 package com.mycompany.testfile;
 
 /**
- *
+ *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
 public class FinalExam extends GradedActivity {
@@ -16,7 +16,7 @@ public class FinalExam extends GradedActivity {
     public FinalExam(int numQuestions, int numMissed) {
         this.numQuestions = numQuestions;
         this.numMissed = numMissed;
-        pointsEach = 100/this.numQuestions;
+        pointsEach = 100/numQuestions;
         setScore(100 - (this.numMissed * pointsEach));
     }
     
@@ -27,4 +27,13 @@ public class FinalExam extends GradedActivity {
     public int getNumMissed() {
         return numMissed;
     }
+
+    @Override
+    public String toString() {
+        return "Each question is worth " + pointsEach + " points each.\n" +
+                "The exam score is " + getScore() + "\n" +
+                "The exam grade is " + getGrade();
+    }
+    
+    
 }

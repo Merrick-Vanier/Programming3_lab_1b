@@ -5,7 +5,7 @@
 package com.mycompany.testfile;
 
 /**
- *
+ *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author 6237800
  */
 public class PassFailActivity extends GradedActivity {
@@ -21,4 +21,15 @@ public class PassFailActivity extends GradedActivity {
         if (score >= minPassingScore) return 'P';
         else return 'F';
     }
+
+    public double getMinPassingScore() {
+        return minPassingScore;
+    }
+
+    public void setMinPassingScore(double minPassingScore) {
+        this.minPassingScore = minPassingScore;
+    }
+    
+    
+    
 }
