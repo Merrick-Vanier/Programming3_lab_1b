@@ -8,7 +8,7 @@ import java.util.*;
  *https://github.com/Merrick-Vanier/Programming3_lab_1b
  * @author Nagat
  */
-public class Testfile {
+public class Lab_01_part_02 {
 
     /**
      * @param args the command line arguments
